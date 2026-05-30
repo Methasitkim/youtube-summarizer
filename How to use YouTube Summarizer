@@ -1,0 +1,51 @@
+🎬 YouTube Summarizer
+สรุปเนื้อหา YouTube video เป็นภาษาไทยอัตโนมัติด้วย AI
+✨ Features
+
+รับ YouTube URL จาก command line
+ดึง transcript อัตโนมัติ รองรับทั้งภาษาไทยและอังกฤษ
+สรุปเนื้อหาเป็นภาษาไทยด้วย Gemini AI
+บันทึกผลลัพธ์เป็นไฟล์ .txt
+
+🛠️ Tech Stack
+
+Python 3.x
+youtube-transcript-api
+Google Gemini API
+
+🚀 วิธีใช้งาน
+1. ติดตั้ง dependencies
+bashpip install youtube-transcript-api google-generativeai
+2. ตั้งค่า API Key
+bash# Windows
+set GEMINI_API_KEY=your_api_key_here
+
+# Mac/Linux
+export GEMINI_API_KEY=your_api_key_here
+
+สมัคร Gemini API Key ฟรีได้ที่ aistudio.google.com
+
+3. รัน
+bashpython main.py https://www.youtube.com/watch?v=VIDEO_ID
+ตัวอย่าง Output
+กำลังดึง transcript จาก: https://www.youtube.com/watch?v=aircAruvnKk
+กำลังสรุปด้วย AI...
+
+===== สรุปเนื้อหา =====
+**สรุป: Neural Networks (โครงสร้างเบื้องต้น)**
+
+1. **ความสามารถของสมอง vs. คอมพิวเตอร์**
+   - สมองมนุษย์สามารถจดจำตัวเลข...
+
+บันทึกผลลงไฟล์ summary.txt แล้ว
+📁 โครงสร้างโปรเจกต์
+youtube-summarizer/
+├── main.py          # โค้ดหลัก
+├── summary.txt      # ผลลัพธ์การสรุป
+└── .gitignore
+💡 สิ่งที่เรียนรู้
+
+การใช้งาน LLM API (Gemini)
+Prompt Engineering เบื้องต้น
+การจัดการ Environment Variables อย่างปลอดภัย
+Python argparse และ file I/O
